@@ -4,8 +4,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple DOM example</title>
+    
+    <style>
+      .highlight {
+      color: white;
+      background-color: black;
+      padding: 10px;
+      width: 250px;
+      text-align: center;
+      } 
+    </style>
+
   </head>
   <body>
+
+   
       <section>
         <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
         <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
@@ -14,6 +27,35 @@
       <script>
         //to manipulate an element you first need to select it and store a reference to it in a variable.
         const link = document.querySelector("a");
+
+        const sect = document.querySelector("section");
+
+        const para = document.createElement("p");
+
+        para.textContent = "We hope you enjoyed the ride";
+
+        sect.appendChild(para);
+
+        const text = document.createTextNode(
+          " - the premier source for web development knowledge.",
+                );
+
+        const linkPara = document.querySelector("p");
+
+        linkPara.appendChild(text);
+
+
+      sect.appendChild(linkPara);
+
+      //sect.removeChild(linkPara);
+
+      linkPara.remove();
+
+      /*
+      setAttribute takes two arguments (and at the beginning takes the element name). 
+      The attribute you want to set on the element and the value you want to set it to.
+      */
+      para.setAttribute("class", "highlight");         
         
       </script>
   </body>
