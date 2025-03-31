@@ -27,35 +27,6 @@
       <script>
         //to manipulate an element you first need to select it and store a reference to it in a variable.
         const link = document.querySelector("a");
-
-        const sect = document.querySelector("section");
-
-        const para = document.createElement("p");
-
-        para.textContent = "We hope you enjoyed the ride";
-
-        sect.appendChild(para);
-
-        const text = document.createTextNode(
-          " - the premier source for web development knowledge.",
-                );
-
-        const linkPara = document.querySelector("p");
-
-        linkPara.appendChild(text);
-
-
-      sect.appendChild(linkPara);
-
-      //sect.removeChild(linkPara);
-
-      linkPara.remove();
-
-      /*
-      setAttribute takes two arguments (and at the beginning takes the element name). 
-      The attribute you want to set on the element and the value you want to set it to.
-      */
-      para.setAttribute("class", "highlight");         
         
       </script>
   </body>
